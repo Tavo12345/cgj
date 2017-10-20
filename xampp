@@ -17,3 +17,17 @@ Order deny,allow
 Allow from all
 ErrorDocument 403 /error/HTTP_XAMPP_FORBIDDEN.html.var
 </LocationMatch>
+
+
+
+
+
+
+
+#
+# New XAMPP security concept
+#
+<LocationMatch “^/(?i:(?:xampp|security|licenses|phpmyadmin|webalizer|server-status|server-info))”>
+Require local
+ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</LocationMatch>
